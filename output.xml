@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20221130 23:37:33.855" rpa="false" schemaversion="2">
+<suite id="s1" name="Bdd" source="C:\Users\user\ScriptsPython\bdd.robot">
+<test id="s1-t1" name="Cenário 1: Executar vídeo no site do youtube">
+<kw name="Dado Que Eu Acesso O Site Do Youtube">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221130 23:37:34.147" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
+<status status="PASS" starttime="20221130 23:37:34.147" endtime="20221130 23:37:44.631"/>
+</kw>
+<status status="PASS" starttime="20221130 23:37:34.147" endtime="20221130 23:37:44.632"/>
+</kw>
+<kw name="Quando digito o nome da música">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Pesquisa}</arg>
+<arg>${NomeDaMusica}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221130 23:37:44.635" level="INFO">Typing text 'Ariana Grande Positions' into text field '//input[@id="search"]'.</msg>
+<status status="PASS" starttime="20221130 23:37:44.634" endtime="20221130 23:37:44.981"/>
+</kw>
+<status status="PASS" starttime="20221130 23:37:44.633" endtime="20221130 23:37:44.981"/>
+</kw>
+<kw name="E clico no botão buscar">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Button_Pesquisa}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221130 23:37:44.996" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
+<status status="PASS" starttime="20221130 23:37:44.995" endtime="20221130 23:37:45.186"/>
+</kw>
+<status status="PASS" starttime="20221130 23:37:44.994" endtime="20221130 23:37:45.186"/>
+</kw>
+<kw name="E clico na primeira opção da lista">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Primeiro}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221130 23:37:45.188" endtime="20221130 23:37:46.496"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Primeiro}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221130 23:37:46.497" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
+<status status="PASS" starttime="20221130 23:37:46.496" endtime="20221130 23:37:47.103"/>
+</kw>
+<status status="PASS" starttime="20221130 23:37:45.187" endtime="20221130 23:37:47.104"/>
+</kw>
+<kw name="Então o vídeo é executado">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221130 23:37:47.115" endtime="20221130 23:37:47.972"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Prova}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221130 23:37:48.914" level="INFO">Element '//button[@class="ytp-play-button ytp-button"]' is displayed.</msg>
+<status status="PASS" starttime="20221130 23:37:47.973" endtime="20221130 23:37:48.914"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221130 23:37:49.923" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221130 23:37:48.914" endtime="20221130 23:37:49.927"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221130 23:37:49.929" endtime="20221130 23:37:52.268"/>
+</kw>
+<status status="PASS" starttime="20221130 23:37:47.114" endtime="20221130 23:37:52.268"/>
+</kw>
+<status status="PASS" starttime="20221130 23:37:34.147" endtime="20221130 23:37:52.268"/>
+</test>
+<status status="PASS" starttime="20221130 23:37:33.855" endtime="20221130 23:37:52.268"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Bdd">Bdd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
